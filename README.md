@@ -4,6 +4,8 @@
 
 IDEA • SYSTEM • REAL IMPACT
 
+[Buka website Nalarakit](https://sukmanlife.github.io/nalarakit/) · [Layanan dan kontak](https://lynk.id/nalarakit)
+
 Nalarakit adalah website profil layanan digital untuk individu dan bisnis. Website ini memperkenalkan layanan pembuatan website, sistem informasi, analisis data, dan otomatisasi proses, disertai konsep portofolio serta jalur kontak untuk membahas kebutuhan proyek.
 
 Tujuannya sederhana: membantu calon pelanggan memahami layanan Nalarakit dan memulai percakapan tentang solusi yang mereka butuhkan.
@@ -100,7 +102,9 @@ nalarakit/
 
 ## Publikasi melalui GitHub Pages
 
-Repository ini dapat disajikan sebagai website statis dari branch `main`:
+Website aktif di [sukmanlife.github.io/nalarakit](https://sukmanlife.github.io/nalarakit/) dan dipublikasikan dari branch `main`, folder `/(root)`. Perubahan yang dikirim ke branch ini akan memicu publikasi ulang.
+
+Untuk menyiapkan deployment yang sama pada salinan repository:
 
 1. Buka **Settings → Pages** pada repository.
 2. Pilih **Deploy from a branch**.
