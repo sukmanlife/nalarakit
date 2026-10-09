@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2553EB">
+  <meta name="description" content="Nalarakit membantu individu dan bisnis membangun website, sistem informasi, analisis data, dan otomatisasi yang sederhana, efektif, dan berdampak nyata.">
+  <title>Nalarakit — Solusi Digital dengan Nalar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: 'Poppins', sans-serif;
+      --color-primary: #2553EB;
+      --color-secondary: #3B82F6;
+      --color-accent: #93C5FD;
+      --color-ink: #0F172A;
+      --color-slate-dark: #1E293B;
+      --color-soft: #E2E8F0;
+      --color-paper: #F8FAFC;
+    }
+  </style>
+  <style>
+    /* Small, self-contained illustration styles complement Tailwind utilities. */
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; color: #0F172A; background: #F8FAFC; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 3px solid #2553EB; outline-offset: 5px; }
+    ::selection { background: #93C5FD; color: #0F172A; }
+    .hero-glow { background: radial-gradient(ellipse at 75% 50%, #dbeafe 0, #f1f5fc 39%, #f8fafc 70%); }
+    .laptop { transform: perspective(1100px) rotateY(-13deg) rotateX(5deg) rotateZ(3deg); }
+    .laptop-screen { border: 9px solid #1E293B; border-top-width: 15px; border-radius: 18px 18px 6px 6px; background: #fff; box-shadow: 18px 28px 55px #0f172a26; }
+    .laptop-base { height: 18px; margin: 0 -5%; border-radius: 2px 2px 50% 50% / 2px 2px 90% 90%; background: linear-gradient(#cbd5e1, #94a3b8 45%, #e2e8f0 65%, #64748b); box-shadow: 0 18px 25px #0f172a1a; }
+    .laptop-base::before { content: ''; display: block; width: 19%; height: 5px; margin: auto; background: #64748b; border-radius: 0 0 9px 9px; }
+    .preview-line { height: 5px; border-radius: 4px; background: #e2e8f0; }
+    .preview-grid { background-image: linear-gradient(#e2e8f060 1px, transparent 1px); background-size: 100% 25%; }
+    .project-preview { aspect-ratio: 16 / 10; overflow: hidden; }
+    dialog::backdrop { background: #0f172ab3; backdrop-filter: blur(5px); }
+    @media (max-width: 639px) { .laptop { transform: perspective(1100px) rotateY(-7deg) rotateZ(2deg); } .laptop-screen { border-width: 6px; border-top-width: 11px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <a href="#main" class="sr-only fixed left-4 top-4 z-50 rounded-lg bg-primary px-5 py-3 text-white transition-all duration-300 focus:not-sr-only">Lewati ke konten</a>
+
+  <!-- Shared SVG icons: no external icon library or image assets required. -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#2553EB"/></linearGradient>
+      <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3B82F6" stop-opacity=".35"/><stop offset="1" stop-color="#93C5FD" stop-opacity=".03"/></linearGradient>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
+      <symbol id="icon-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M3 21V11h4v10m3 0V3h4v18m3 0V7h4v14M2 21h20"/></symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24"><path d="m9 3 1-2h4l1 2 2 1 2-.2 2 3.4-1.2 1.8v3L21 14l-2 3.5-2-.2-2 1-1 2.2h-4l-1-2.2-2-1-2 .2L3 14l1.2-2.1v-3L3 7.2l2-3.4 2 .2Z" transform="translate(0 1)"/><circle cx="12" cy="12" r="3"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- 1. Header / responsive navigation -->
+  <header class="sticky top-0 z-40 border-b border-soft/60 bg-paper/95 backdrop-blur-xl">
+    <div class="mx-auto flex h-22 max-w-7xl items-center justify-between gap-5 px-6 lg:px-10">
+      <a href="#beranda" aria-label="Nalarakit, beranda" class="flex shrink-0 items-center gap-2.5 transition-all duration-300 hover:opacity-80">
+        <span class="grid size-10 place-items-center rounded-xl bg-primary shadow-lg shadow-primary/15">
+          <svg viewBox="0 0 32 32" class="size-7" aria-hidden="true"><path d="M5 25V7l5-3 12 15V4l5 4v17l-5 3L10 13v15Z" fill="white"/></svg>
+        </span>
+        <span class="text-[23px] font-bold tracking-[-1px]">Nalarakit<span class="text-primary">.</span></span>
+      </a>
+      <nav aria-label="Navigasi utama" class="hidden items-center gap-7 text-[12px] font-medium lg:flex">
+        <a href="#beranda" class="text-primary transition-all duration-300 hover:text-secondary">Beranda</a>
+        <a href="#layanan" class="transition-all duration-300 hover:text-primary">Layanan</a>
+        <a href="#portofolio" class="transition-all duration-300 hover:text-primary">Portofolio</a>
+        <a href="#tentang" class="transition-all duration-300 hover:text-primary">Tentang</a>
+        <a href="#kontak" class="transition-all duration-300 hover:text-primary">Kontak</a>
+      </nav>
+      <a href="#kontak" class="hidden rounded-full bg-primary px-6 py-3 text-xs font-medium text-white shadow-lg shadow-primary/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary sm:inline-flex">Hubungi Kami</a>
+      <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Buka menu navigasi" class="grid size-11 place-items-center rounded-xl border border-soft transition-all duration-300 hover:border-primary hover:text-primary lg:hidden">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path id="menu-path" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" aria-label="Navigasi seluler" hidden class="border-t border-soft bg-white px-6 py-5 lg:hidden">
+      <div class="mx-auto grid max-w-7xl gap-1 text-sm">
+        <a href="#beranda" class="rounded-lg px-3 py-3 transition-all duration-300 hover:bg-primary/5 hover:text-primary">Beranda</a>
+        <a href="#layanan" class="rounded-lg px-3 py-3 transition-all duration-300 hover:bg-primary/5 hover:text-primary">Layanan</a>
+        <a href="#portofolio" class="rounded-lg px-3 py-3 transition-all duration-300 hover:bg-primary/5 hover:text-primary">Portofolio</a>
+        <a href="#tentang" class="rounded-lg px-3 py-3 transition-all duration-300 hover:bg-primary/5 hover:text-primary">Tentang</a>
+        <a href="#kontak" class="rounded-lg px-3 py-3 transition-all duration-300 hover:bg-primary/5 hover:text-primary">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero / CSS-crafted laptop with illustrative dashboard -->
+    <section id="beranda" aria-labelledby="hero-title" class="hero-glow overflow-hidden">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-16 pt-16 sm:py-20 lg:min-h-[620px] lg:grid-cols-2 lg:gap-10 lg:px-10 lg:py-20">
+        <div class="relative z-10">
+          <p class="mb-6 text-[10px] font-medium tracking-[.28em] text-slate-500 sm:text-[11px]">IDEA <span class="mx-1 text-primary">•</span> SYSTEM <span class="mx-1 text-primary">•</span> REAL IMPACT</p>
+          <h1 id="hero-title" class="max-w-xl text-[38px] leading-[1.17] font-bold tracking-[-1.7px] sm:text-[48px] lg:text-[53px]">Solusi Digital<br class="hidden sm:block"> yang Dibangun<br class="hidden sm:block"> dengan <span class="text-primary">Nalar.</span></h1>
+          <p class="mt-6 max-w-[470px] text-sm leading-7 text-slate-600 sm:text-[15px]">Nalarakit membantu individu dan bisnis membangun sistem digital yang sederhana, efektif, dan berdampak nyata.</p>
+          <div class="mt-8 flex flex-col gap-3 min-[480px]:flex-row">
+            <a href="#kontak" class="inline-flex items-center justify-center gap-5 rounded-xl bg-primary px-7 py-4 text-sm font-medium text-white shadow-xl shadow-primary/15 transition-all duration-300 hover:-translate-y-1 hover:bg-secondary">Mulai Proyek <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <a href="#portofolio" class="inline-flex items-center justify-center rounded-xl border border-soft bg-white/70 px-7 py-4 text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:text-primary">Lihat Portofolio</a>
+          </div>
+          <div class="mt-8 flex items-center gap-3 text-[11px] text-slate-500"><span class="h-px w-8 bg-accent"></span>Dirancang dengan tujuan. Dibangun untuk digunakan.</div>
+        </div>
+        <figure class="relative mx-auto w-full max-w-[540px] px-3 pb-8 pt-7 lg:px-0" aria-label="Ilustrasi laptop dengan dashboard sistem informasi Nalarakit">
+          <div class="absolute inset-4 rounded-full bg-accent/15 blur-3xl" aria-hidden="true"></div>
+          <div class="laptop relative" aria-hidden="true">
+            <div class="laptop-screen overflow-hidden">
+              <div class="flex aspect-[1.52]">
+                <div class="flex w-[17%] flex-col gap-4 bg-ink px-[3%] py-5 text-white">
+                  <div class="text-[9px] font-bold">N<span class="text-accent">.</span></div>
+                  <div class="mt-3 rounded bg-primary px-1 py-2 text-[5px] sm:text-[7px]">Dashboard</div>
+                  <div class="space-y-5 opacity-35"><div class="h-1 rounded bg-white"></div><div class="h-1 w-4/5 rounded bg-white"></div><div class="h-1 rounded bg-white"></div></div>
+                  <div class="mt-auto size-5 rounded-full bg-secondary/30"></div>
+                </div>
+                <div class="w-[83%] bg-paper p-[4%]">
+                  <div class="flex items-center justify-between border-b border-soft pb-3 text-[6px] text-slate-500"><span>Ruang kerja / Ringkasan</span><span class="size-3 rounded-full bg-accent"></span></div>
+                  <div class="my-4 flex items-center justify-between"><span class="text-[11px] font-semibold sm:text-[14px]">Dashboard</span><span class="rounded bg-white px-2 py-1 text-[6px] text-slate-500">Bulan ini ⌄</span></div>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="rounded-md border border-soft/70 bg-white p-2"><div class="text-[5px] text-slate-500 sm:text-[7px]">Pendapatan</div><div class="mt-2 text-[9px] font-semibold sm:text-[12px]">Rp12,5 jt</div><div class="mt-1 text-[5px] text-primary">Ringkasan bulanan</div></div>
+                    <div class="rounded-md border border-soft/70 bg-white p-2"><div class="text-[5px] text-slate-500 sm:text-[7px]">Transaksi</div><div class="mt-2 text-[9px] font-semibold sm:text-[12px]">128</div><div class="mt-1 text-[5px] text-primary">Data terorganisir</div></div>
+                    <div class="rounded-md border border-soft/70 bg-white p-2"><div class="text-[5px] text-slate-500 sm:text-[7px]">Pelanggan</div><div class="mt-2 text-[9px] font-semibold sm:text-[12px]">64</div><div class="mt-1 text-[5px] text-primary">Dalam satu tempat</div></div>
+                  </div>
+                  <div class="mt-3 rounded-md border border-soft/70 bg-white p-3">
+                    <div class="mb-3 flex justify-between text-[7px]"><span class="font-medium">Aktivitas usaha</span><span class="text-primary">● Pendapatan</span></div>
+                    <svg viewBox="0 0 300 95" class="preview-grid w-full" preserveAspectRatio="none"><path d="M0 75C20 70 22 47 44 54S75 83 98 57S129 32 150 44S177 69 200 35S224 49 247 22S273 10 300 3V95H0Z" fill="url(#chart-gradient)"/><path d="M0 75C20 70 22 47 44 54S75 83 98 57S129 32 150 44S177 69 200 35S224 49 247 22S273 10 300 3" fill="none" stroke="#3B82F6" stroke-width="2.5"/></svg>
+                    <div class="mt-2 flex justify-between text-[5px] text-slate-400"><span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+          <div class="absolute -bottom-2 right-1 flex items-center gap-3 rounded-xl border border-white bg-white/95 px-4 py-3 shadow-xl shadow-slate-900/5 sm:right-5">
+            <span class="grid size-8 place-items-center rounded-full bg-primary/10 text-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span>
+            <div><p class="text-[10px] font-semibold">Satu sistem. Lebih terarah.</p><p class="mt-0.5 text-[9px] text-slate-500">Dari ide menjadi solusi.</p></div>
+          </div>
+          <figcaption class="sr-only">Mockup ilustratif, bukan data pelanggan atau hasil bisnis.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. Services / four distinct inline SVG icons -->
+    <section id="layanan" aria-labelledby="services-title" class="bg-white py-14 sm:py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mb-8 flex items-end justify-between gap-6"><div><p class="text-[10px] font-semibold tracking-[.2em] text-primary">APA YANG KAMI KERJAKAN</p><h2 id="services-title" class="mt-2 text-2xl font-semibold tracking-tight">Solusi untuk setiap langkah.</h2></div><p class="hidden max-w-[250px] text-xs leading-6 text-slate-500 md:block">Teknologi yang relevan, dimulai dari kebutuhan Anda.</p></div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group rounded-2xl border border-soft/80 bg-paper/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl hover:shadow-primary/5"><div class="mb-6 grid size-12 place-items-center rounded-xl bg-accent/20 text-primary"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-code"/></svg></div><h3 class="text-[14px] font-semibold">Website Development</h3><p class="mt-3 text-xs leading-6 text-slate-500">Website profesional yang sesuai kebutuhan bisnis Anda.</p></article>
+          <article class="group rounded-2xl border border-soft/80 bg-paper/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl hover:shadow-primary/5"><div class="mb-6 grid size-12 place-items-center rounded-xl bg-accent/20 text-primary"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-data"/></svg></div><h3 class="text-[14px] font-semibold">Sistem Informasi</h3><p class="mt-3 text-xs leading-6 text-slate-500">Sistem yang terintegrasi dan mudah digunakan.</p></article>
+          <article class="group rounded-2xl border border-soft/80 bg-paper/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl hover:shadow-primary/5"><div class="mb-6 grid size-12 place-items-center rounded-xl bg-accent/20 text-primary"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-chart"/></svg></div><h3 class="text-[14px] font-semibold">Analisis Data</h3><p class="mt-3 text-xs leading-6 text-slate-500">Mengubah data menjadi insight untuk pengambilan keputusan.</p></article>
+          <article class="group rounded-2xl border border-soft/80 bg-paper/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl hover:shadow-primary/5"><div class="mb-6 grid size-12 place-items-center rounded-xl bg-accent/20 text-primary"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-gear"/></svg></div><h3 class="text-[14px] font-semibold">Otomatisasi Proses</h3><p class="mt-3 text-xs leading-6 text-slate-500">Meningkatkan efisiensi dengan solusi digital.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Portfolio / CSS-only concept previews; cards open accessible details. -->
+    <section id="portofolio" aria-labelledby="portfolio-title" class="bg-white pb-16 pt-4 sm:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mb-7 flex items-center justify-between gap-4"><div><h2 id="portfolio-title" class="text-2xl font-semibold tracking-tight">Portofolio</h2><span class="mt-3 block h-0.5 w-9 rounded bg-primary"></span></div><a href="#karya" class="inline-flex items-center gap-2 text-xs font-medium text-primary transition-all duration-300 hover:gap-4 hover:text-secondary">Lihat Semua <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+        <div id="karya" class="grid gap-7 md:grid-cols-3">
+          <article class="group rounded-2xl transition-all duration-300 hover:-translate-y-1">
+            <button data-project="company" aria-label="Lihat konsep Website Company Profile" class="block w-full cursor-pointer rounded-2xl text-left transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+              <div class="project-preview rounded-2xl border border-soft bg-slate-dark p-5" aria-hidden="true"><div class="flex justify-between text-[6px] text-white/50"><span class="font-semibold text-white">STUDIO / RUANG</span><span>About &nbsp; Projects &nbsp; Contact</span></div><div class="mt-7 grid grid-cols-2 gap-4"><div><span class="text-[5px] tracking-[2px] text-accent">DESIGN WITH PURPOSE</span><p class="mt-3 text-[17px] leading-tight font-medium text-white lg:text-[20px]">A thoughtful<br>space for<br>your ideas.</p><div class="mt-4 h-4 w-16 rounded bg-accent"></div></div><div class="relative h-32 overflow-hidden rounded bg-slate-600"><div class="absolute inset-0 bg-linear-to-br from-slate-400 via-slate-600 to-ink"></div><div class="absolute bottom-0 left-4 h-24 w-8 -skew-y-12 bg-white/20"></div><div class="absolute right-4 top-2 h-32 w-12 border-x-4 border-ink/40 bg-ink/30"></div><div class="absolute right-0 bottom-3 h-4 w-24 -rotate-12 bg-soft/30"></div></div></div></div>
+              <div class="px-1 pt-5"><div class="flex items-center justify-between gap-2"><h3 class="text-sm font-semibold group-hover:text-primary">Website Company Profile</h3><span class="text-primary" aria-hidden="true">↗</span></div><p class="mt-2 text-xs leading-6 text-slate-500">Website profesional untuk perusahaan.</p></div>
+            </button>
+          </article>
+          <article class="group rounded-2xl transition-all duration-300 hover:-translate-y-1">
+            <button data-project="system" aria-label="Lihat konsep Sistem Informasi" class="block w-full cursor-pointer rounded-2xl text-left transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+              <div class="project-preview flex rounded-2xl border border-soft bg-[#edf2fc] p-4" aria-hidden="true"><div class="w-1/6 space-y-4 rounded-l-lg bg-primary p-3"><div class="size-3 rounded bg-white"></div><div class="h-1 rounded bg-white/70"></div><div class="h-1 rounded bg-white/30"></div><div class="h-1 rounded bg-white/30"></div></div><div class="flex-1 rounded-r-lg bg-white p-3"><div class="flex justify-between text-[5px]"><span>Ruang kerja</span><span class="text-slate-400">Admin</span></div><p class="mt-3 text-[11px] font-semibold">Dashboard</p><div class="mt-3 grid grid-cols-3 gap-2"><div class="rounded bg-paper p-2 text-[8px] font-semibold">24<div class="preview-line mt-2"></div></div><div class="rounded bg-paper p-2 text-[8px] font-semibold">128<div class="preview-line mt-2"></div></div><div class="rounded bg-paper p-2 text-[8px] font-semibold">64<div class="preview-line mt-2"></div></div></div><div class="mt-3 rounded border border-soft p-2"><div class="preview-line w-1/3"></div><svg viewBox="0 0 200 55" class="mt-2 w-full"><path d="M0 45 25 38 45 40 70 25 95 30 115 18 145 22 175 5 200 12V55H0Z" fill="#dbeafe"/><path d="m0 45 25-7 20 2 25-15 25 5 20-12 30 4 30-17 25 7" fill="none" stroke="#3B82F6" stroke-width="2"/></svg></div></div></div>
+              <div class="px-1 pt-5"><div class="flex items-center justify-between gap-2"><h3 class="text-sm font-semibold group-hover:text-primary">Sistem Informasi</h3><span class="text-primary" aria-hidden="true">↗</span></div><p class="mt-2 text-xs leading-6 text-slate-500">Dashboard manajemen data.</p></div>
+            </button>
+          </article>
+          <article class="group rounded-2xl transition-all duration-300 hover:-translate-y-1">
+            <button data-project="webapp" aria-label="Lihat konsep Aplikasi Web" class="block w-full cursor-pointer rounded-2xl text-left transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+              <div class="project-preview rounded-2xl border border-soft bg-ink p-4" aria-hidden="true"><div class="mb-3 flex justify-between text-[6px] text-white"><span>nalar / workspace</span><span>•••</span></div><div class="flex h-[85%] gap-3"><div class="w-1/6 space-y-4 pt-3"><div class="h-1 rounded bg-accent"></div><div class="h-1 rounded bg-slate-600"></div><div class="h-1 rounded bg-slate-600"></div></div><div class="flex-1 rounded-lg bg-paper p-3"><div class="flex justify-between text-[8px] font-semibold"><span>Katalog Produk</span><span class="text-primary">+</span></div><div class="mt-3 grid grid-cols-3 gap-2"><div class="rounded bg-white p-2"><div class="grid h-12 place-items-center rounded bg-orange-50 text-lg">▱</div><div class="preview-line mt-2"></div></div><div class="rounded bg-white p-2"><div class="grid h-12 place-items-center rounded bg-blue-100 text-lg text-primary">◒</div><div class="preview-line mt-2"></div></div><div class="rounded bg-white p-2"><div class="grid h-12 place-items-center rounded bg-slate-200 text-lg">▯</div><div class="preview-line mt-2"></div></div></div><div class="mt-4 space-y-2"><div class="preview-line"></div><div class="preview-line w-4/5"></div></div></div></div></div>
+              <div class="px-1 pt-5"><div class="flex items-center justify-between gap-2"><h3 class="text-sm font-semibold group-hover:text-primary">Aplikasi Web</h3><span class="text-primary" aria-hidden="true">↗</span></div><p class="mt-2 text-xs leading-6 text-slate-500">Aplikasi untuk kebutuhan operasional.</p></div>
+            </button>
+          </article>
+        </div>
+        <p class="mt-6 text-[10px] text-slate-400">Pratinjau konsep solusi digital Nalarakit.</p>
+      </div>
+    </section>
+
+    <!-- About and contact anchors provide useful destinations for every nav item. -->
+    <section id="tentang" aria-labelledby="about-title" class="border-t border-soft/70 bg-paper">
+      <div class="mx-auto grid max-w-7xl gap-8 px-6 py-14 md:grid-cols-2 md:items-center lg:px-10"><div><p class="text-[10px] font-semibold tracking-[.2em] text-primary">TENTANG NALARAKIT</p><h2 id="about-title" class="mt-3 max-w-sm text-2xl leading-snug font-semibold tracking-tight">Berangkat dari kebutuhan.<br>Berakhir pada solusi.</h2></div><p class="max-w-lg text-sm leading-7 text-slate-500">Kami percaya solusi digital yang baik dimulai dengan memahami masalah. Dengan pendekatan yang terarah, Nalarakit menghubungkan ide, sistem, dan kebutuhan sehari-hari menjadi pengalaman yang mudah digunakan.</p></div>
+    </section>
+    <section id="kontak" aria-labelledby="contact-title" class="bg-white px-6 py-14 lg:px-10">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 rounded-2xl border border-accent/30 bg-primary/5 p-7 sm:p-9 md:flex-row md:items-center"><div><h2 id="contact-title" class="text-2xl font-semibold tracking-tight">Punya ide? Mari kita rakit.</h2><p class="mt-2 text-sm leading-7 text-slate-500">Ceritakan kebutuhan Anda. Kita mulai dari percakapan.</p></div><a href="mailto:nalarakit3@gmail.com?subject=Diskusi%20Proyek%20Nalarakit" class="inline-flex shrink-0 items-center justify-center gap-4 rounded-full bg-primary px-7 py-4 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-secondary">Hubungi Kami <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+    </section>
+  </main>
+
+  <!-- 5. Footer / verified Nalarakit contact channels. -->
+  <footer class="bg-ink text-white">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-8 text-[11px] sm:text-xs lg:flex-row lg:items-center lg:px-10">
+      <p class="text-slate-400">© <span id="year">2026</span> <span class="font-medium text-white">Nalarakit.</span> All rights reserved.</p>
+      <address class="flex flex-col gap-3 not-italic text-soft sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+        <a href="https://lynk.id/nalarakit" class="transition-all duration-300 hover:text-accent">lynk.id/nalarakit</a><span class="hidden text-slate-600 sm:block" aria-hidden="true">|</span>
+        <a href="mailto:nalarakit3@gmail.com" class="transition-all duration-300 hover:text-accent">nalarakit3@gmail.com</a><span class="hidden text-slate-600 sm:block" aria-hidden="true">|</span>
+        <span>Indonesia</span>
+      </address>
+    </div>
+  </footer>
+
+  <!-- Portfolio details: native modal handles focus trapping and Escape. -->
+  <dialog id="project-dialog" aria-labelledby="project-title" class="fixed inset-0 m-auto w-[calc(100%-2rem)] max-w-lg rounded-2xl border-0 bg-white p-7 text-ink shadow-2xl sm:p-9">
+    <div class="flex items-start justify-between gap-4"><p class="text-[10px] font-semibold tracking-[.2em] text-primary">KONSEP SOLUSI</p><button id="close-dialog" type="button" aria-label="Tutup detail portofolio" class="-mt-2 grid size-9 shrink-0 place-items-center rounded-full bg-paper text-xl transition-all duration-300 hover:bg-soft">×</button></div>
+    <h2 id="project-title" class="mt-4 text-2xl font-semibold"></h2><p id="project-description" class="mt-4 text-sm leading-7 text-slate-500"></p>
+    <a id="project-contact" href="#kontak" class="mt-7 inline-flex rounded-full bg-primary px-6 py-3 text-sm text-white transition-all duration-300 hover:bg-secondary">Diskusikan kebutuhan serupa</a>
+  </dialog>
+
+  <script>
+    // Mobile navigation: accessible state, close on selection/Escape/desktop resize.
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const menuPath = document.getElementById('menu-path');
+    function setMenu(open) {
+      menu.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+      menuPath.setAttribute('d', open ? 'M6 6l12 12M6 18 18 6' : 'M4 6h16M4 12h16M4 18h16');
+    }
+    toggle.addEventListener('click', () => setMenu(menu.hidden));
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); }
+    });
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
+
+    // Editable concept descriptions; replace these with real case studies when ready.
+    const projects = {
+      company: { title: 'Website Company Profile', description: 'Konsep website perusahaan dengan profil bisnis, penjelasan layanan, dan jalur kontak yang jelas. Tata letak dirancang agar identitas bisnis mudah dikenali pada desktop maupun ponsel.' },
+      system: { title: 'Sistem Informasi', description: 'Konsep dashboard untuk mengelola data dan melihat ringkasan aktivitas dalam satu tempat. Struktur data, peran pengguna, dan kebutuhan laporan dapat dibahas sesuai proses bisnis Anda.' },
+      webapp: { title: 'Aplikasi Web', description: 'Konsep aplikasi operasional dengan katalog dan tampilan data yang terstruktur. Alur kerja dan fitur ditentukan berdasarkan kebutuhan pengguna agar aplikasi mudah dipakai sehari-hari.' }
+    };
+    const dialog = document.getElementById('project-dialog');
+    document.querySelectorAll('[data-project]').forEach(button => button.addEventListener('click', () => {
+      const project = projects[button.dataset.project];
+      document.getElementById('project-title').textContent = project.title;
+      document.getElementById('project-description').textContent = project.description;
+      dialog.showModal();
+    }));
+    document.getElementById('close-dialog').addEventListener('click', () => dialog.close());
+    document.getElementById('project-contact').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+      const rect = dialog.getBoundingClientRect();
+      if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
